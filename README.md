@@ -9,14 +9,14 @@ rails _6.0.0_
 
 | Column             | Type   | Options                   |
 | ------------------ | ------ | ------------------------- |
-| nickname           | string | null: false, unique: true |
-| email              | string | null: false               |
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
 | encrypted_password | string | null: false               |
-| fname              | text   | null: false               |
-| lname              | text   | null: false               |
-| fname_kana         | text   | null: false               |
-| lname_kana         | text   | null: false               |
-| birthdate          | text   | null: false               |
+| fname              | string | null: false               |
+| lname              | string | null: false               |
+| fname_kana         | string | null: false               |
+| lname_kana         | string | null: false               |
+| birthdate          | date   | null: false               |
 
 ### Association
 
@@ -29,13 +29,13 @@ rails _6.0.0_
 | ---------------- | ---------- | ------------------------------ |
 | item             | string     | null: false                    |
 | item_description | text       | null: false                    |
-| category         | text       | null: false                    |
-| item_condition   | text       | null: false                    |
-| shipbase         | text       | null: false                    |
-| shiparea         | text       | null: false                    |
-| shipdate         | text       | null: false                    |
-| price            | text       | null: false                    |
-| user_id          | references | null: false, foreign_key: true |
+| category_id      | integer    | null: false                    |
+| item_condition_id| integer    | null: false                    |
+| shipbase_id      | integer    | null: false                    |
+| shiparea_id      | integer    | null: false                    |
+| shipdate_id      | integer    | null: false                    |
+| price            | integer    | null: false                    |
+| user             | references | null: false, foreign_key: true |
 
 
 ### Association
@@ -47,8 +47,8 @@ rails _6.0.0_
 
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
-| user_id      | references | null: false, foreign_key: true |
-| item_id      | references | null: false, foreign_key: true |
+| user         | references | null: false, foreign_key: true |
+| item         | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -56,20 +56,20 @@ rails _6.0.0_
 - belongs_to :item
 - has_one :delivery
 
-## deliverys テーブル
+## deliveries テーブル
 
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
-| postalCode       | string     | null: false                    |
-| shipregion       | text       | null: false                    |
+| postalcode       | string     | null: false                    |
+| shiparea_id      | integer    | null: false                    |
 | shipcity         | text       | null: false                    |
 | shipaddress      | text       | null: false                    |
 | apartment        | text       | null: false                    |
 | shiparea         | text       | null: false                    |
 | shipdate         | text       | null: false                    |
 | phone_number     | text       | null: false                    |
-| user_id          | references | null: false, foreign_key: true |
-| item_id          | references | null: false, foreign_key: true |
+| user             | references | null: false, foreign_key: true |
+| item             | references | null: false, foreign_key: true |
 
 ### Association
 
