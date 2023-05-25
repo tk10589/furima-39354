@@ -41,6 +41,7 @@ rails _6.0.0_
 ### Association
 
 - belongs_to :user
+- has_one :order
 
 ## orders テーブル
 
@@ -52,6 +53,7 @@ rails _6.0.0_
 ### Association
 
 - belongs_to :user
+- belongs_to :item
 - has_one :delivery
 
 ## deliveries テーブル
