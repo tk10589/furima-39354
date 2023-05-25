@@ -41,7 +41,6 @@ rails _6.0.0_
 ### Association
 
 - belongs_to :user
-- has_many :orders
 
 ## orders テーブル
 
@@ -53,7 +52,6 @@ rails _6.0.0_
 ### Association
 
 - belongs_to :user
-- belongs_to :item
 - has_one :delivery
 
 ## deliveries テーブル
@@ -62,14 +60,11 @@ rails _6.0.0_
 | ---------------- | ---------- | ------------------------------ |
 | postalcode       | string     | null: false                    |
 | shiparea_id      | integer    | null: false                    |
-| shipcity         | text       | null: false                    |
-| shipaddress      | text       | null: false                    |
-| apartment        | text       | null: false                    |
-| shiparea         | text       | null: false                    |
-| shipdate         | text       | null: false                    |
-| phone_number     | text       | null: false                    |
-| user             | references | null: false, foreign_key: true |
-| item             | references | null: false, foreign_key: true |
+| shipcity         | string     | null: false                    |
+| shipaddress      | string     | null: false                    |
+| apartment        | string     |                                |
+| phone_number     | string     | null: false                    |
+| order            | references | null: false, foreign_key: true |
 
 ### Association
 
