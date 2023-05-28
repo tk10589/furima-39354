@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
   validates :password, format: { with: /\A(?=.*?[a-zA-Z])(?=.*?[0-9])/ }
-  with_options presence: true, format: { with: /\A[ぁ-んァ-ン一-龥]+\z/ } do
+  with_options presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ } do
     validates :fname
     validates :lname
   end
