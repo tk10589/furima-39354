@@ -48,29 +48,34 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include('Item description is too long (maximum is 1000 characters)')
       end
       it 'category_idが空では登録できない' do
-        @item.category_id = ''
+        @item.category_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Category can't be blank")
       end
       it 'item_condition_idが空では登録できない' do
-        @item.item_condition_id = ''
+        @item.item_condition_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Item condition can't be blank")
       end
       it 'shipbase_idが空では登録できない' do
-        @item.shipbase_id = '---'
+        @item.shipbase_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipbase can't be blank")
       end
       it 'shiparea_idが空では登録できない' do
-        @item.shiparea_id = '---'
+        @item.shiparea_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Shiparea can't be blank")
       end
       it 'shipdate_idが空では登録できない' do
-        @item.shipdate_id = '---'
+        @item.shipdate_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipdate can't be blank")
+      end
+      it 'priceが空だと登録できない' do
+        @item.price = ''
+        @item.valid?
+        expect(@item.errors.full_messages).to include('Price is not a number')
       end
       it 'priceが半角数字以外だと登録できない' do
         @item.price = '１１１１'
@@ -86,6 +91,11 @@ RSpec.describe Item, type: :model do
         @item.price = '10000000'
         @item.valid?
         expect(@item.errors.full_messages).to include('Price must be less than or equal to 9999999')
+      end
+      it 'userが紐づいていないと登録できない' do
+        @item.user = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include("User must exist")
       end
     end
   end
