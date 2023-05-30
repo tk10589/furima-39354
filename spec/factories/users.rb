@@ -13,4 +13,5 @@ FactoryBot.define do
     lname_kana            { person.last.katakana }
     birthdate             { Faker::Date.birthday }
   end
+
 end
