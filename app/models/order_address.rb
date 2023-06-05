@@ -5,13 +5,13 @@ class OrderAddress
   with_options presence: true do
     validates :user_id
     validates :item_id
-    validates :order_id
+    #validates :order_id
     validates :postalcode, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "Input correctly"}
-    validates :shiparea_id, numericality: { other_than: 1, message: "can't be blank" }
     validates :shipcity
     validates :shipaddress
     validates :phone_number, format: {with: /\A\d{10,11}\z/ , message: "Input only number"}
   end
+  validates :shiparea_id, numericality: { other_than: 1, message: "can't be blank" }
 
   def save
     order = Order.create(user_id: user_id, item_id: item_id)
