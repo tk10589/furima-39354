@@ -33,65 +33,60 @@ RSpec.describe OrderAddress, type: :model do
         expect(@order_address).not_to be_valid
         expect(@order_address.errors[:postalcode]).to include("can't be blank")
       end
-
       it 'order_addressは『3桁ハイフン4桁』半角英数字でないと保存できないこと' do
         @order_address.postalcode = '123-456７'
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Postalcode Input correctly")
-      end
-    
+      end    
       it 'shiparea_idが空では登録できない' do
         @order_address.shiparea_id = nil
         expect(@order_address).not_to be_valid
         expect(@order_address.errors[:shiparea_id]).to include("can't be blank")
-      end
-    
+      end    
       it 'shipcityが空ではでは登録できない' do
         @order_address.shipcity = nil
         expect(@order_address).not_to be_valid
         expect(@order_address.errors[:shipcity]).to include("can't be blank")
-      end
-    
+      end    
       it 'shipaddressが空では登録できない' do
         @order_address.shipaddress = nil
         expect(@order_address).not_to be_valid
         expect(@order_address.errors[:shipaddress]).to include("can't be blank")
       end
-
       it 'phone_numberが半角数値でないと購入できないこと' do
         @order_address.phone_number = '090123４1234'
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Phone number Input only number")
-      end
-    
+      end    
       it 'phone_numberが空では登録できない' do
         @order_address.phone_number = nil
         expect(@order_address).not_to be_valid
         expect(@order_address.errors[:phone_number]).to include("can't be blank")
-      end
-    
+      end    
       it 'phone_numberが9桁で登録できない' do
         @order_address.phone_number = '123456789'
         expect(@order_address).not_to be_valid
         expect(@order_address.errors[:phone_number]).to include("Input only number")
-      end
-    
+      end    
       it 'phone_numberが12桁で登録できない' do
         @order_address.phone_number = '123456789012'
         expect(@order_address).not_to be_valid
         expect(@order_address.errors[:phone_number]).to include("Input only number")
       end
-
       it 'userが紐づいていないと登録できない' do
         @order_address.user_id = nil
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("User can't be blank")
-      end
-    
+      end    
       it 'itemが紐づいていないと登録できない' do
         @order_address.item_id = nil
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Item can't be blank")
+      end
+      it "tokenが空では登録できないこと" do
+        @order_address.token = nil
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("Token can't be blank")
       end
     end
   end
