@@ -33,13 +33,13 @@ RSpec.describe OrderAddress, type: :model do
         expect(@order_address).not_to be_valid
         expect(@order_address.errors[:postalcode]).to include("can't be blank")
       end
-      it 'order_addressは『3桁ハイフン4桁』半角英数字でないと保存できないこと' do
+      it 'postalcodeは『3桁ハイフン4桁』半角英数字でないと保存できないこと' do
         @order_address.postalcode = '123-456７'
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include('Postalcode Input correctly')
       end
       it 'shiparea_idが空では登録できない' do
-        @order_address.shiparea_id = nil
+        @order_address.shiparea_id = 1
         expect(@order_address).not_to be_valid
         expect(@order_address.errors[:shiparea_id]).to include("can't be blank")
       end
