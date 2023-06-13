@@ -78,3 +78,4 @@ gem 'payjp'
 gem 'dotenv'
 gem "aws-sdk-s3", require: false
 gem 'mail', '2.7.1'
+gem 'rails-i18n'
