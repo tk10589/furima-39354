@@ -1,0 +1,34 @@
+current directory: /home/takahashi/projects/furima-39354/vender/bundle/ruby/2.6.0/gems/unicorn-5.4.1/ext/unicorn_http
+/home/takahashi/.rbenv/versions/2.6.5/bin/ruby extconf.rb
+checking for SIZEOF_OFF_T in ruby.h... yes
+checking for SIZEOF_SIZE_T in ruby.h... yes
+checking for SIZEOF_LONG in ruby.h... yes
+checking for rb_str_set_len() in ruby.h... yes
+checking for rb_hash_clear() in ruby.h... yes
+checking for gmtime_r() in time.h... yes
+creating Makefile
+
+current directory: /home/takahashi/projects/furima-39354/vender/bundle/ruby/2.6.0/gems/unicorn-5.4.1/ext/unicorn_http
+make DESTDIR\= sitearchdir\=./.gem.20230613-58700-1k48ahb sitelibdir\=./.gem.20230613-58700-1k48ahb clean
+
+current directory: /home/takahashi/projects/furima-39354/vender/bundle/ruby/2.6.0/gems/unicorn-5.4.1/ext/unicorn_http
+make DESTDIR\= sitearchdir\=./.gem.20230613-58700-1k48ahb sitelibdir\=./.gem.20230613-58700-1k48ahb
+compiling httpdate.c
+compiling unicorn_http.c
+unicorn_http.c:303:18: warning: ‘http_parser_en_main’ defined but not used [-Wunused-const-variable=]
+  303 | static const int http_parser_en_main = 1;
+      |                  ^~~~~~~~~~~~~~~~~~~
+unicorn_http.c:301:18: warning: ‘http_parser_en_ChunkedBody_chunk_chunk_end’ defined but not used [-Wunused-const-variable=]
+  301 | static const int http_parser_en_ChunkedBody_chunk_chunk_end = 105;
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+linking shared-object unicorn_http.so
+
+current directory: /home/takahashi/projects/furima-39354/vender/bundle/ruby/2.6.0/gems/unicorn-5.4.1/ext/unicorn_http
+make DESTDIR\= sitearchdir\=./.gem.20230613-58700-1k48ahb sitelibdir\=./.gem.20230613-58700-1k48ahb install
+/usr/bin/install -c -m 0755 unicorn_http.so ./.gem.20230613-58700-1k48ahb
+
+current directory: /home/takahashi/projects/furima-39354/vender/bundle/ruby/2.6.0/gems/unicorn-5.4.1/ext/unicorn_http
+make DESTDIR\= sitearchdir\=./.gem.20230613-58700-1k48ahb sitelibdir\=./.gem.20230613-58700-1k48ahb clean
