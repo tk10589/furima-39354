@@ -77,4 +77,4 @@ gem 'image_processing', '~> 1.2'
 gem 'payjp'
 gem 'dotenv'
 gem "aws-sdk-s3", require: false
-gem 'date'
+gem 'mail', '2.7.1'
