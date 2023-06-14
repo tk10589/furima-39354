@@ -12,7 +12,7 @@ module Furima39354
     config.load_defaults 6.0
 
     # 日本語の言語設定
-    config.i18n.default_locale = :ja
+    #config.i18n.default_locale = :ja
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

@@ -3,6 +3,4 @@ ja:
     attributes:
       user:
         nickname: ニックネーム
-      tweet:
-        text: テキスト
-        image: 画像
+        birthdate: 誕生日
