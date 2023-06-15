@@ -1,6 +1,33 @@
 ---
 ja:
   activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        email: Eメール
+        password: パスワード
+        fname: 名前全角
+        lname: 名字全角
+        fname_kana: 名前全角カナ
+        lname_kana: 名字全角カナ
+        birthday: 誕生日
+      item:
+        item_name: 商品名
+        item_description: 商品の説明
+        category_id: カテゴリ
+        item_condition_id: 商品の状態
+        shipbase_id: 配送料の負担
+        shiparea_id: 発送元の地域
+        shipdate_id: 発送までの日数
+        price: 価格
+      delivery:
+        postalcode: 郵便番号
+        shiparea_id: 都道府県
+        shipcity: 市区町村
+        shipaddress: 番地
+        apartment: 建物名
+        phone_number: 電話番号
+  activerecord:
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
@@ -181,30 +208,4 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
-  attributes:
-    users:
-      nickname: ニックネーム
-      email: Eメール
-      password: パスワード
-      fname: 名前全角
-      lname: 名字全角
-      fname_kana: 名前全角カナ
-      lname_kana: 名字全角カナ
-      birthday: 誕生日
-    items:
-      item_name: 商品名
-      item_description: 商品の説明
-      category_id: カテゴリ
-      item_condition_id: 商品の状態
-      shipbase_id: 配送料の負担
-      shiparea_id: 発送元の地域
-      shipdate_id: 発送までの日数
-      price: 価格
-    deliveries:
-      postalcode: 郵便番号
-      shiparea_id: 都道府県
-      shipcity: 市区町村
-      shipaddress: 番地
-      apartment: 建物名
-      phone_number: 電話番号
 
