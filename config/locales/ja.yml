@@ -1,33 +1,33 @@
 ja:
   activerecord:
     models:
-      user: "ユーザー"
+      user: ユーザー
     attributes:
       user:
-        nickname: "ニックネーム"
-        password: "パスワード"
-        fname: "名前"
-        lname: "姓"
-        fname_kana: "名前(カナ)"
-        lname_kana: "姓(カナ)"
-        birthdate: "生年月日"
+        nickname: ニックネーム
+        password: パスワード
+        fname: 名前
+        lname: 姓
+        fname_kana: 名前(カナ)
+        lname_kana: 姓(カナ)
+        birthdate: 生年月日
     errors:
       models:
         user:
           attributes:
             nickname:
-              blank: "ニックネームを入力してください"
+              blank: ニックネームを入力してください
             password:
-              invalid: "パスワードは半角英字と数字の両方を含む形式で入力してください"
+              invalid: パスワードは半角英字と数字の両方を含む形式で入力してください
             fname:
-              invalid: "名前は漢字、ひらがな、カタカナで入力してください"
+              invalid: 名前は漢字、ひらがな、カタカナで入力してください
             lname:
-              invalid: "姓は漢字、ひらがな、カタカナで入力してください"
+              invalid: 姓は漢字、ひらがな、カタカナで入力してください
             fname_kana:
-              invalid: "名前(カナ)はカタカナで入力してください"
+              invalid: 名前(カナ)はカタカナで入力してください
             lname_kana:
-              invalid: "姓(カナ)はカタカナで入力してください"
+              invalid: 姓(カナ)はカタカナで入力してください
             birthdate:
-              blank: "生年月日を入力してください"
+              blank: 生年月日を入力してください
   errors:
     format: "%{attribute} %{message}"
