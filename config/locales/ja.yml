@@ -1,10 +1,9 @@
 ja:
   activerecord:
-  models:
+    models:
       user: "ユーザー"
-      order_address: "注文住所"
     attributes:
-    user:
+      user:
         nickname: "ニックネーム"
         password: "パスワード"
         fname: "名前"
@@ -12,20 +11,9 @@ ja:
         fname_kana: "名前(カナ)"
         lname_kana: "姓(カナ)"
         birthdate: "生年月日"
-      item:
-        item_name: "商品名"
-        item_description: "商品の説明"
-      order_address:
-        postalcode: "郵便番号"
-        shiparea_id: "都道府県"
-        shipcity: "市区町村"
-        shipaddress: "番地"
-        apartment: "マンション名・部屋番号"
-        phone_number: "電話番号"
-        token: "トークン"
     errors:
       models:
-      user:
+        user:
           attributes:
             nickname:
               blank: "ニックネームを入力してください"
@@ -41,35 +29,5 @@ ja:
               invalid: "姓(カナ)はカタカナで入力してください"
             birthdate:
               blank: "生年月日を入力してください"
-        item:
-          attributes:
-            category_id:
-              blank: "カテゴリを選択してください"
-            item_condition_id:
-              blank: "商品の状態を選択してください"
-            shipbase_id:
-              blank: "発送元地域を選択してください"
-            shiparea_id:
-              blank: "配送地域を選択してください"
-            shipdate_id:
-              blank: "発送日目安を選択してください"
-          messages:
-            blank: "入力してください"
-        order_address:
-          attributes:
-            postalcode:
-              invalid: "郵便番号はXXX-XXXXの形式で入力してください"
-            shiparea_id:
-              blank: "都道府県を選択してください"
-            shipcity:
-              blank: "市区町村を入力してください"
-            shipaddress:
-              blank: "番地を入力してください"
-            apartment:
-              blank: "マンション名・部屋番号を入力してください"
-            phone_number:
-              invalid: "電話番号は10桁または11桁の数字で入力してください"
-            token:
-              blank: "クレジットカード情報を入力してください"
   errors:
     format: "%{attribute} %{message}"
